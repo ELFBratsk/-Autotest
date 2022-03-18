@@ -10,12 +10,12 @@ class TestMainPage1():
 
     @classmethod
     def setup_class(self):
-        print("\nstart browser for test suite 1 ..")
+        print("\nНачало работы браузера 1 ..")
         self.browser = webdriver.Chrome(r'C:\\Users\\user\\PycharmProjects\data_test\\chromedriver.exe')
 
     @classmethod
     def teardown_class(self):
-        print("quit browser for test suite 1 ..")
+        print("Окончание работы браузера 1 ..")
         self.browser.quit()
 
 
@@ -33,11 +33,11 @@ class TestMainPage1():
 class TestMainPage2():
 
     def setup_method(self):
-        print("start browser for test 2..")
+        print("Начало работы браузера 2..")
         self.browser = webdriver.Chrome(r'C:\\Users\\user\\PycharmProjects\data_test\\chromedriver.exe')
 
     def teardown_method(self):
-        print("quit browser for test 2..")
+        print("Завршение работы браузера 2..")
         self.browser.quit()
 
     def test_guest_should_see_login_link(self):

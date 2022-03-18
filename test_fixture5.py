@@ -4,12 +4,12 @@ from selenium import webdriver
 link = "http://selenium1py.pythonanywhere.com/"
 
 
-@pytest.fixture(scope="class")
+@pytest.fixture(scope="class")  #область покрытия фикстур
 def browser():
-    print("\nstart browser for test..")
+    print("\nСтарт браузера")
     browser = webdriver.Chrome(r'C:\\Users\\user\\PycharmProjects\data_test\\chromedriver.exe')
     yield browser
-    print("\nquit browser..")
+    print("\nЗакрытие браузера")
     browser.quit()
 
 
@@ -27,3 +27,4 @@ class TestMainPage1():
         browser.get(link)
         browser.find_element_by_css_selector(".basket-mini .btn-group > a")
         print("finish test2")
+
